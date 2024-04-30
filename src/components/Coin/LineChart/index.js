@@ -17,8 +17,28 @@ const LineChart = ({chartData, priceType, multiAxis}) =>{
         intersect: false,
     },
     scales: {
-      y: {
-
+      cryto1: {
+          type: "linear",
+          display: true,
+          position: "left",
+           ticks: {
+                  // Include a dollar sign in the ticks
+                   callback: function (value, index, ticks){
+                  if(priceType == "prices"){
+                    return "$" + value.toLocaleString();
+                        } 
+                  else{
+                    return "$" + convertNumber(value);
+                  }
+                  },
+                },
+          },
+    },
+    scales: {
+      cryto2: {
+        type: "linear",
+        display: true,
+        position: "right",
            ticks: {
                   // Include a dollar sign in the ticks
                    callback: function (value, index, ticks){
