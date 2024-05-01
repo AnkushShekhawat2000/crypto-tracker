@@ -10,7 +10,7 @@ export default function SelectDays({days, handleDaysChange, noPTag}) {
     <div className="select-days">
         {!noPTag &&  <p>Price Change In</p>}
         <Select
-        sx={{
+          sx={{
             height: "2.5rem",
             color: "var(--white)",
             "& .MuiOutlinedInput-notchedOutline": {
